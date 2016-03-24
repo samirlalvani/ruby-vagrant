@@ -17,9 +17,28 @@ $ bin/rails server -b 0.0.0.0
 You should see the Rails smoke test screen at <http://localhost:9000/> on your
 host OS.
 
+### Pre-built Base Box
+
+You can also use a pre-built version of this box as the basis of your Vagrant:
+[peichman-umd/ruby][3]:
+
+```
+$ mkdir myproject
+$ cd myproject
+$ vagrant init peichman-umd/ruby
+$ vagrant up
+```
+
+Note that if you use the pre-built base box, you will have to specify the port
+forwarding yourself in your project's Vagrantfile:
+
+```ruby
+config.vm.network "forwarded_port", guest: 3000, host: 9000
+```
+
 ## Details
 
-* CentOS 7.7 64-bit (base box: [puppetlabs/centos-7.0-64-puppet][1])
+* CentOS 7.0 64-bit (base box: [puppetlabs/centos-7.0-64-puppet][1])
 * RVM 1.26.11
 * Ruby 2.2.4
 * Rails 4.2.6
@@ -45,3 +64,4 @@ more details.
 
 [1]: https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.0-64-puppet/versions/1.0.1
 [2]: http://guides.rubyonrails.org/getting_started.html#starting-up-the-web-server
+[3]: https://atlas.hashicorp.com/peichman-umd/boxes/ruby/versions/1.0.0
