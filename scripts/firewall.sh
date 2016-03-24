@@ -4,6 +4,5 @@
 # 3000: Rails default HTTP port
 firewall-cmd --zone=public --add-port=3000/tcp --permanent
 
-# reload firewalld to make the changes take effect
-systemctl stop firewalld
-systemctl start firewalld
+# reload the firewall to make the changes take effect
+firewall-cmd --reload

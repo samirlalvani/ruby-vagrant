@@ -1,9 +1,12 @@
 package { 'vim-enhanced':
-  ensure => present,
+  ensure        => present,
+  allow_virtual => false,
 }
 package { 'tree':
-  ensure => present,
+  ensure        => present,
+  allow_virtual => false,
 }
 package { 'lsof':
-  ensure => present,
+  ensure        => present,
+  allow_virtual => false,
 }
