@@ -12,7 +12,8 @@ source ~/.rvm/scripts/rvm
 
 # install and use Ruby
 rvm install "$RUBY_VERSION"
-rvm use "$RUBY_VERSION" --default
+rvm use "$RUBY_VERSION"@global --default
 
-# install Rails
+# install Bundler and Rails
+gem install bundler
 gem install rails --version "$RAILS_VERSION"
