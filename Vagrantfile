@@ -27,4 +27,7 @@ Vagrant.configure(2) do |config|
 
   # install RVM, Ruby, and Rails
   config.vm.provision "shell", path: 'scripts/ruby.sh', privileged: false
+
+  # install and configure QuickSearch
+  config.vm.provision "shell", path: 'scripts/quick_search.sh', privileged: false
 end
