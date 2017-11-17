@@ -5,6 +5,7 @@ Basic CentOS 7.0 Vagrant with rbenv, Ruby 2.3.5, Rails 5.0.6, and [QuickSearch][
 ## Usage
 
 ```
+$ vagrant plugin install vagrant-vbguest
 $ vagrant up
 $ vagrant ssh
 
